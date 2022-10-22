@@ -1,0 +1,27 @@
+﻿@model List<User>
+
+<div class="container col-md-10">
+    <table>
+        <thead class="thead thead-dark"> 
+            <tr>
+                <th>No</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach(var customer in Model)
+            {
+                <tr>
+                    <td>@(Model.IndexOf(customer)+1)</td>
+                    <td>@customer.UserName</td>
+                    <td>Email</td>
+                    <td>Phone Number</td>
+                </tr>
+            }
+        </tbody>
+       
+    </table>
+</div>

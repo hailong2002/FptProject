@@ -1,0 +1,18 @@
+﻿@model FPTBook.Models.Request
+@if(TempData["Message"] != null)
+{
+    <h3 class="alert alert-success">@TempData["Message"]</h3>
+}
+<div class="container col-md-8">
+    <h3 class="text-info">Enter the information of the category to send to the admin for approval</h3>
+    <form method="post" asp-controller="Category" asp-action="Request">
+
+            <label>Name: </label>
+            <input asp-for=@Model.Name class="form-control"/><br />
+       
+            <label>Description: </label>
+            <input asp-for=@Model.Description class="form-control"/> <br />
+       
+            <input type="submit" value="Request" class="btn btn-info"/>
+    </form>
+</div>
