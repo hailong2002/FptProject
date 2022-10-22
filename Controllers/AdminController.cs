@@ -20,7 +20,7 @@ namespace FPTBook.Controllers
         [Route("/")]
         public IActionResult Index()
         {
-            var requests = context.requests.ToList();
+            var requests = context.Requests.ToList();
             return View(requests);
         }
 
@@ -28,10 +28,10 @@ namespace FPTBook.Controllers
         public IActionResult ApproveRequest(int id)
         {
             var request = new Category();
-             request.Name = context.requests.Where(x=> x.Id == id).First().Name;
-             request.Description = context.requests.Where(x=> x.Id == id).First().Description;
-           // request = (Category)context.requests.Where(x => x.Id == id);
-            var category = context.categories.Add(request);
+             request.Name = context.Requests.Where(x=> x.Id == id).First().Name;
+             request.Description = context.Requests.Where(x=> x.Id == id).First().Description;
+            TempData["Message"] = "New Category has been added";
+            var category = context.Categories.Add(request);
             context.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -42,8 +42,8 @@ namespace FPTBook.Controllers
             else
             {
                 TempData["Message"] = "Request has been rejected.";
-                var request = context.requests.Find(id);
-                context.requests.Remove(request);
+                var request = context.Requests.Find(id);
+                context.Requests.Remove(request);
                 context.SaveChanges();
                 return RedirectToAction("Index");
             }
