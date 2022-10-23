@@ -951,3 +951,5 @@ C:\Users\dell\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\
 C:\Users\dell\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\Razor\Views\Category\Add.cshtml.g.cs
 C:\Users\dell\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\Razor\Views\Category\Edit.cshtml.g.cs
 C:\Users\dell\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\Razor\Views\Category\Index.cshtml.g.cs
+C:\Users\dell\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\Razor\Views\Client\Store.cshtml.g.cs
+C:\Users\dell\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\Razor\Views\Client\Detail.cshtml.g.cs

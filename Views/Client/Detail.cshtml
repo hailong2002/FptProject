@@ -1,7 +1,10 @@
 ﻿@model FPTBook.Models.Book
 
-<div class="row container">
-    <div class="col-md-4 text-center">    
+@{
+    Layout = "_Layout1";
+}
+<div class="row container" style="padding-bottom: 300px; padding-top:20px">
+    <div style="padding-top: 45px" class="col-md-4 text-center">
         <img src="@Model.Image" width="300" height="300" /><br />
     </div>
 
@@ -9,7 +12,7 @@
         <h3 class="text-info text-center">Infomation</h3>
         <table class="table table-info table-bordered">
             <tr>
-                <th>Tittle</th>
+                <th>Title</th>
                 <td>@Model.Title</td>
             </tr>
             <tr>
@@ -32,15 +35,10 @@
                 <th>Description</th>
                 <td>@Model.Description</td>
             </tr>
-
-            <tr class="text-center">
-                <a class="btn btn-warning" asp-controller="Book" asp-action="Edit" asp-route-id="@Model.Id">
-                    <i class="bi bi-pencil-square"></i>
-                </a>
-                <a class="btn btn-danger" asp-controller="Book" asp-action="Delete" asp-route-id="@Model.Id" onclick="return confirm('Are you sure to delete this book BROOOO???');">
-                    <i class="bi bi-trash3-fill"></i>
-                </a>
-            </tr>
         </table>
+        <div class="text-center">
+        <input type="number" name="quantity" min="1" max="@Model.Quantity">
+        <input class="btn btn-success" type="submit" value="Order">
+        </div>
     </div>
 </div>
