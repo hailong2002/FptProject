@@ -951,6 +951,7 @@ C:\Users\dell\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\
 C:\Users\dell\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\Razor\Views\Category\Add.cshtml.g.cs
 C:\Users\dell\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\Razor\Views\Category\Edit.cshtml.g.cs
 C:\Users\dell\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\Razor\Views\Category\Index.cshtml.g.cs
+<<<<<<< HEAD
 C:\Users\TNT\OneDrive\Máy tính\FptProject\FptProject\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\TNT\OneDrive\Máy tính\FptProject\FptProject\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\TNT\OneDrive\Máy tính\FptProject\FptProject\bin\Debug\netcoreapp3.1\FPTBook.StaticWebAssets.xml
@@ -1432,3 +1433,7 @@ C:\Users\TNT\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\F
 C:\Users\TNT\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\FPTBook.pdb
 C:\Users\TNT\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\FPTBook.genruntimeconfig.cache
 C:\Users\TNT\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Bookowner.cshtml.g.cs
+=======
+C:\Users\dell\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\Razor\Views\Client\Store.cshtml.g.cs
+C:\Users\dell\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\Razor\Views\Client\Detail.cshtml.g.cs
+>>>>>>> 5025b808367e2abc64fa0e40cacd9510a29b785c
