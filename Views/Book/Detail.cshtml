@@ -1,14 +1,17 @@
 ﻿@model FPTBook.Models.Book
 
 <div class="row container">
-    <div class="col-md-4 text-center">    
+    <div class="col-md-4 text-center mt-4" >    
         <img src="@Model.Image" width="400" height="400" /><br />
-        <h3 class="text-info text-uppercase text-center"><b>@Model.Title</b></h3>
     </div>
 
     <div class="col-md-8">
         <h3 class="text-info text-center">Infomation</h3>
         <table class="table table-info table-bordered">
+            <tr>
+                <th>Title</th>
+                <td>@Model.Title</td>
+            </tr>
             <tr>
                 <th>Author</th>
                 <td>@Model.Author</td>
@@ -36,6 +39,9 @@
                 </a>
                 <a class="btn btn-danger" asp-controller="Book" asp-action="Delete" asp-route-id="@Model.Id" onclick="return confirm('Are you sure to delete this book BROOOO???');">
                     <i class="bi bi-trash3-fill"></i>
+                </a>
+                <a class="btn btn-primary" asp-controller="Book" asp-action="Index" >
+                    <i class="bi bi-arrow-left"></i>
                 </a>
             </tr>
         </table>

@@ -1,0 +1,44 @@
+﻿@model FPTBook.Models.Book
+
+@{
+    Layout = "_Layout1";
+}
+<div class="row container" style="padding-bottom: 300px; padding-top:20px">
+    <div style="padding-top: 45px" class="col-md-4 text-center">
+        <img src="@Model.Image" width="300" height="300" /><br />
+    </div>
+
+    <div class="col-md-8">
+        <h3 class="text-info text-center">Infomation</h3>
+        <table class="table table-info table-bordered">
+            <tr>
+                <th>Title</th>
+                <td>@Model.Title</td>
+            </tr>
+            <tr>
+                <th>Author</th>
+                <td>@Model.Author</td>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <td>@Model.Category.Name</td>
+            </tr>
+            <tr>
+                <th>Quantity</th>
+                <td>@Model.Quantity</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>@Model.Price</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>@Model.Description</td>
+            </tr>
+        </table>
+        <div class="text-center">
+        <input type="number" name="quantity" min="1" max="@Model.Quantity">
+        <input class="btn btn-success" type="submit" value="Order">
+        </div>
+    </div>
+</div>

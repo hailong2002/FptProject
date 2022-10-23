@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FPTBook.Migrations
 {
-    public partial class hello : Migration
+    public partial class @new : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -227,9 +227,9 @@ namespace FPTBook.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "A", "842634cd-1ac3-4045-abf5-2d9b3d9a36e7", "Administrator", "Administrator" },
-                    { "B", "dbc7e205-beb9-4312-b347-926245a6090e", "BookOwner", "BookOwner" },
-                    { "C", "05d65c09-9dcd-4e20-aee9-ff120456b9f8", "Customer", "Customer" }
+                    { "A", "7e6e3630-febd-4ebd-94b4-84fcc7d4e36a", "Administrator", "Administrator" },
+                    { "B", "2ff926af-f638-41c5-8aa7-dac7755ab343", "BookOwner", "BookOwner" },
+                    { "C", "9b8a08a1-dc69-40cd-abd5-8b66cc37f244", "Customer", "Customer" }
                 });
 
             migrationBuilder.InsertData(
@@ -237,9 +237,11 @@ namespace FPTBook.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "1", 0, "626ed876-e52f-489e-a0a0-8439bce435bb", "admin@gmail.com", true, false, null, null, "admin@gmail.com", "AQAAAAEAACcQAAAAEA6WsWElrXlZhUbP80kdgsCREMYrxY7nXKwbpy/tNj8CCb/LD67Bo7jSbfR9XkxSSA==", null, false, "076e904c-d651-4806-bc2a-c8623fdacccc", false, "admin@gmail.com" },
-                    { "2", 0, "155e46a5-4965-4819-b0f5-381d455278e8", "bookowner@gmail.com", true, false, null, null, "bookowner@gmail.com", "AQAAAAEAACcQAAAAEE82tPPWDWKv801cfiEQ80n8PQzxDf0LPtjk+mjmOaDnOg9Pv8ee1+6HWT3o5Q3JPQ==", null, false, "2849b370-12c7-4b1f-b3f5-b46ef7c36005", false, "bookowner@gmail.com" },
-                    { "3", 0, "7eab904b-0e67-4656-affb-aa0e055a3816", "customer@gmail.com", true, false, null, null, "customer@gmail.com", "AQAAAAEAACcQAAAAEGIH6W9XckO9vUV5g/AaSm4wTNCqChAArgG6kDipedeHQjIJf/9bPJwax9v7yTZmyw==", null, false, "e5e589a4-9c21-4d08-bae7-0665aa268065", false, "customer@gmail.com" }
+                    { "1", 0, "91129ddb-f831-4468-899c-692bf575502d", "admin@gmail.com", true, false, null, null, "admin@gmail.com", "AQAAAAEAACcQAAAAEOkXRm+vPNN82dUOUT3Y7iiDU5zG4kLCP6TRyOV6CGKYdTki9MSpMCBGuDSxbEOtwQ==", "1234567890", false, "ab5f5da6-67eb-46eb-bc5a-e864a2396f22", false, "admin@gmail.com" },
+                    { "2", 0, "9fe16b73-2584-4318-bce4-f6cbbe23ae0a", "bookowner1@gmail.com", true, false, null, null, "bookowner1@gmail.com", "AQAAAAEAACcQAAAAEDpyDtwZz5PrD84i0W+gDLELmzGeHwHHFQpbRBDIg0zpJKejlZC07YGeJN0CfuTs1Q==", "0987654321", false, "c7a89111-cb81-4d87-ae7a-8651ec374904", false, "bookowner1@gmail.com" },
+                    { "3", 0, "f75d1895-a800-40d1-91c9-db2553bd914c", "bookowner2@gmail.com", true, false, null, null, "bookowner2@gmail.com", "AQAAAAEAACcQAAAAEIQJO0JsIgp1KeDQdoGkkCMKUcWIsVEcH5IeWwPkM5pjHoW/6p/jsXUBfiLjOyskMg==", "0987227890", false, "a096b3b2-ba85-4db0-a8e5-90e1277fbeed", false, "bookowner2@gmail.com" },
+                    { "4", 0, "c2d8da2c-1374-4a0e-8965-dd7d6b86764f", "bookowner3@gmail.com", true, false, null, null, "bookowner@gmail.com", null, "0222567890", false, "8af298a8-cdd7-4c30-82d7-ccfb4552fcd3", false, "bookowner3@gmail.com" },
+                    { "5", 0, "cdd68da6-dee8-4c49-b660-1d92e3d6d9fe", "customer@gmail.com", true, false, null, null, "customer@gmail.com", "AQAAAAEAACcQAAAAEJypuFe+HbQZvvgaMr0AVAEn+gmnJU10MO1Z1ZZVwKx+RuLPSwNkRk2MUyuk75NkHw==", "0123456789", false, "5c4b6777-c1e7-4f72-9a4e-e3f72cbfa7b1", false, "customer@gmail.com" }
                 });
 
             migrationBuilder.InsertData(
@@ -261,7 +263,9 @@ namespace FPTBook.Migrations
                 {
                     { "1", "A" },
                     { "2", "B" },
-                    { "3", "C" }
+                    { "3", "B" },
+                    { "4", "B" },
+                    { "5", "C" }
                 });
 
             migrationBuilder.InsertData(

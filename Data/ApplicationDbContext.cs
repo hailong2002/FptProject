@@ -121,25 +121,47 @@ namespace FPTBook.Data
                 Id = "1",
                 UserName = "admin@gmail.com",
                 Email = "admin@gmail.com",
+                PhoneNumber = "1234567890",
                 NormalizedUserName = "admin@gmail.com",
                 EmailConfirmed = true,
 
             };
 
-            var bookOwner = new IdentityUser
+            var bookOwner1 = new IdentityUser
             {
                 Id = "2",
-                UserName = "bookowner@gmail.com",
-                Email = "bookowner@gmail.com",
-                NormalizedUserName = "bookowner@gmail.com",
+                UserName = "bookowner1@gmail.com",
+                Email = "bookowner1@gmail.com",
+                PhoneNumber = "0987654321",
+                NormalizedUserName = "bookowner1@gmail.com",
                 EmailConfirmed = true,
             };
 
-            var customer = new IdentityUser
+            var bookOwner2 = new IdentityUser
             {
                 Id = "3",
+                UserName = "bookowner2@gmail.com",
+                Email = "bookowner2@gmail.com",
+                PhoneNumber = "0987227890",
+                NormalizedUserName = "bookowner2@gmail.com",
+                EmailConfirmed = true,
+            };
+
+            var bookOwner3 = new IdentityUser
+            {
+                Id = "4",
+                UserName = "bookowner3@gmail.com",
+                Email = "bookowner3@gmail.com",
+                PhoneNumber = "0222567890",
+                NormalizedUserName = "bookowner@gmail.com",
+                EmailConfirmed = true,
+            };
+            var customer = new IdentityUser
+            {
+                Id = "5",
                 UserName = "customer@gmail.com",
                 Email = "customer@gmail.com",
+                PhoneNumber = "0123456789",
                 NormalizedUserName = "customer@gmail.com",
                 EmailConfirmed = true,
             };
@@ -148,10 +170,12 @@ namespace FPTBook.Data
 
             var hasher = new PasswordHasher<IdentityUser>();
             admin.PasswordHash = hasher.HashPassword(admin, "123456");
-            bookOwner.PasswordHash = hasher.HashPassword(bookOwner, "123456");
+            bookOwner1.PasswordHash = hasher.HashPassword(bookOwner1, "123456");
+            bookOwner2.PasswordHash = hasher.HashPassword(bookOwner2, "123456");
+            bookOwner2.PasswordHash = hasher.HashPassword(bookOwner2, "123456");
             customer.PasswordHash = hasher.HashPassword(customer, "123456");
 
-            builder.Entity<IdentityUser>().HasData(admin,  bookOwner, customer);
+            builder.Entity<IdentityUser>().HasData(admin,  bookOwner1, bookOwner2, bookOwner3, customer);
         }
 
         private void SeedRole(ModelBuilder builder)
@@ -197,6 +221,17 @@ namespace FPTBook.Data
               new IdentityUserRole<string>
               {
                   UserId = "3",
+                  RoleId = "B"
+              },
+              new IdentityUserRole<string>
+              {
+                  UserId = "4",
+                  RoleId = "B"
+              },
+
+              new IdentityUserRole<string>
+              {
+                  UserId = "5",
                   RoleId = "C"
               }
 

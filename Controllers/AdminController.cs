@@ -17,14 +17,15 @@ namespace FPTBook.Controllers
             this.context = context;
         }
 
-        [Route("/")]
+        [Authorize(Roles = "Administrator")]
         public IActionResult Index()
         {
             var requests = context.Requests.ToList();
             return View(requests);
         }
 
-     
+
+        [Authorize(Roles = "Administrator")]
         public IActionResult ApproveRequest(int id)
         {
             var request = new Category();
@@ -36,6 +37,7 @@ namespace FPTBook.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize(Roles = "Administrator")]
         public IActionResult RejectRequest(int? id)
         {
             if(id == null) return NotFound();
@@ -49,14 +51,26 @@ namespace FPTBook.Controllers
             }
         }
 
+        [Authorize(Roles = "Administrator")]
         public IActionResult Customer()
         {
-            return View();
+            var role = context.UserRoles.Where(r =>r.RoleId == "C").First().UserId;
+            var customer = context.Users.Where(c => c.Id == role).ToList();
+            return View(customer);
         }
+
+        [Authorize(Roles = "Administrator")]
         public IActionResult BookOwner()
         {
-            // var customer = context.AspNetUsers.ToList();
-            return View();
+            /*var roles = context.UserRoles.Where(r => r.RoleId == "B").First().UserId.ToList();
+            var role = "";
+            for (int i = 0; i<= roles.Count(); i++)
+            {
+               role =  roles[i];
+            }*/
+           // var bookowner = context.Users.Where(b=>b.Id == role).ToList();
+         //   return View(bookowner)
+                return View();
         }
     }
 }

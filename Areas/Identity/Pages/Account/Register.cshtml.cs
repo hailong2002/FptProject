@@ -51,6 +51,12 @@ namespace FPTBook.Areas.Identity.Pages.Account
             public string Email { get; set; }
 
             [Required]
+            [StringLength(10, MinimumLength = 10, ErrorMessage = "Phone number must have 10 digits")]
+            [Phone]
+            [Display(Name = "Phone Number")]
+            public string PhoneNumber { get; set; }
+
+            [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
@@ -78,6 +84,10 @@ namespace FPTBook.Areas.Identity.Pages.Account
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
+                    //khai báo default role là "Customer"
+                    var role = "Customer";
+                    //set default role for new user registered by form
+                    await _userManager.AddToRoleAsync(user, role);
                     _logger.LogInformation("User created a new account with password.");
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);

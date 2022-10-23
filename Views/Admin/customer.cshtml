@@ -1,7 +1,8 @@
-﻿@model List<User>
-
-<div class="container col-md-10">
-    <table>
+﻿@model List<Microsoft.AspNetCore.Identity.IdentityUser>
+<h3 class="container text-info text-center">List of customer</h3>
+<div class="container">
+    <div class="col-md-9">
+        <table class="table table-bordered " style="margin-left:150px">
         <thead class="thead thead-dark"> 
             <tr>
                 <th>No</th>
@@ -17,11 +18,12 @@
                 <tr>
                     <td>@(Model.IndexOf(customer)+1)</td>
                     <td>@customer.UserName</td>
-                    <td>Email</td>
-                    <td>Phone Number</td>
+                    <td>@customer.Email</td>
+                    <td>@customer.PhoneNumber</td>
                 </tr>
             }
         </tbody>
-       
-    </table>
+
+        </table>
+    </div> 
 </div>

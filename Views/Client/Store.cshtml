@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "_Layout1";
+}
+<div class="container" style="padding: 20px">
+    <h2 class="text-info text-center"><b>LIST PRODUCT</b></h2>
+    <div class="row">
+        @foreach (var books in Model)
+        {
+            <div class="card col-md-3 text-center" style="width: 18rem;">
+                <img src="@books.Image" class="card-img-top" width="300" height="300">
+                <div class="card-body">
+                    <h5 class="card-title">@books.Title</h5>
+                    <h5 class="card-title text-danger"><strong>$ @books.Price</strong></h5>
+                    <h6 class="card-title">Quantity: @books.Quantity</h6>
+                    <input type="hidden" name="laptop" value="@books.Id">
+                    <br>
+                    <div>
+                        <a class="btn btn-info" asp-controller="Client" asp-action="Detail" asp-route-id="@books.Id">Order</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

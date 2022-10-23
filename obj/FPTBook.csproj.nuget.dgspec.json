@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dell\\OneDrive\\Máy tính\\FptProject\\FptProject\\FPTBook.csproj": {}
+    "C:\\Users\\TNT\\OneDrive\\Máy tính\\FptProject\\FptProject\\FPTBook.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dell\\OneDrive\\Máy tính\\FptProject\\FptProject\\FPTBook.csproj": {
+    "C:\\Users\\TNT\\OneDrive\\Máy tính\\FptProject\\FptProject\\FPTBook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dell\\OneDrive\\Máy tính\\FptProject\\FptProject\\FPTBook.csproj",
+        "projectUniqueName": "C:\\Users\\TNT\\OneDrive\\Máy tính\\FptProject\\FptProject\\FPTBook.csproj",
         "projectName": "FPTBook",
-        "projectPath": "C:\\Users\\dell\\OneDrive\\Máy tính\\FptProject\\FptProject\\FPTBook.csproj",
-        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dell\\OneDrive\\Máy tính\\FptProject\\FptProject\\obj\\",
+        "projectPath": "C:\\Users\\TNT\\OneDrive\\Máy tính\\FptProject\\FptProject\\FPTBook.csproj",
+        "packagesPath": "C:\\Users\\TNT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TNT\\OneDrive\\Máy tính\\FptProject\\FptProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\TNT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
