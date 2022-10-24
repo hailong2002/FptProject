@@ -3,6 +3,7 @@
 @{
     Layout = "_Layout1";
 }
+
 <!-- slider section <div class="hero_area " style="margin-top:-679px">-->
     <section class="slider_section " >
         <div id="customCarousel1" class="carousel slide" data-ride="carousel" >
@@ -15,6 +16,7 @@
                                     <h5>
                                         FPTBook 
                                     </h5>
+                               
                                     <h1>
                                         For All Your <br>
                                         Reading Needs
@@ -36,23 +38,6 @@
                     </div>
                 </div>
 
-            @*<div class="row container">
-                @foreach (var books in Model)
-                {
-                    <div class="card col-md-3" style="width: 18rem;">
-                        <img src="@books.Image" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">@books.Title</h5>
-                            <h5 class="card-title"><strong>$ @books.Price</strong></h5>
-                            <p class="card-text">@books.Description</p>
-                            <div>
-                                <a class="btn btn-info" asp-controller="" asp-action="" asp-route-id="">Detail</a>
-                                <a class="btn btn-info" asp-controller="" asp-action="" asp-route-id="">Order</a>
-                            </div>
-                        </div>
-                    </div>
-                }
-            </div>*@
 
                 <div class="carousel-item">
                     <div class="container ">
@@ -123,57 +108,6 @@
             </div>
         </div>
     </section>
-<<<<<<< HEAD
-=======
-
-@*    <section style="margin: 50px">
-    <div class="row container">
-        @foreach (var books in Model)
-        {
-            <div class="card col-md-3 text-center" style="width: 18rem;">
-                <img src="@books.Image" class="card-img-top" width="300" height="300">
-                <div class="card-body">
-                    <h5 class="card-title">@books.Title</h5>
-                    <h5 class="card-title text-danger"><strong>$ @books.Price</strong></h5>
-                    <h6 class="card-title">Quantity: @books.Quantity</h6>
-                    <input type="hidden" name="laptop" value="@books.Id">
-                    <input type="number" name="quantity" min="1" max="@books.Quantity"><br>
-                    <br>
-                    <div>
-                        <a class="btn btn-info" asp-controller="" asp-action="" asp-route-id="">Detail</a>
-                        <a class="btn btn-info" asp-controller="" asp-action="" asp-route-id="">Order</a>
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
-    </section>*@
-    <!-- end slider section -->
->>>>>>> 5025b808367e2abc64fa0e40cacd9510a29b785c
-
-@*    <section style="margin: 50px">
-    <div class="row container">
-        @foreach (var books in Model)
-        {
-            <div class="card col-md-3 text-center" style="width: 18rem;">
-                <img src="@books.Image" class="card-img-top" width="300" height="300">
-                <div class="card-body">
-                    <h5 class="card-title">@books.Title</h5>
-                    <h5 class="card-title text-danger"><strong>$ @books.Price</strong></h5>
-                    <h6 class="card-title">Quantity: @books.Quantity</h6>
-                    <input type="hidden" name="laptop" value="@books.Id">
-                    <input type="number" name="quantity" min="1" max="@books.Quantity"><br>
-                    <br>
-                    <div>
-                        <a class="btn btn-info" asp-controller="" asp-action="" asp-route-id="">Detail</a>
-                        <a class="btn btn-info" asp-controller="" asp-action="" asp-route-id="">Order</a>
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
-    </section>*@
-    <!-- end slider section -->
 
 
 

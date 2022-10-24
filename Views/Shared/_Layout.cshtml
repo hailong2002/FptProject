@@ -48,7 +48,10 @@
                         @if(User.Identity.IsAuthenticated && User.IsInRole("Administrator"))
                         {
                             <li class="nav-item" style="margin-right:30px">
-                                <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="Index">Category Approval</a>
+                                <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="Index">Request Approval</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Category" asp-action="Index">Category</a>
                             </li>
                             <li class="nav-item" style="margin-right:30px">
                                 <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="Customer">Customer</a>
@@ -64,6 +67,9 @@
                             </li>
                             <li class="nav-item" style="margin-right:30px">
                                 <a class="nav-link text-light" asp-area="" asp-controller="Category" asp-action="Request" >Request</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" style="margin-right:30px" asp-area="" asp-controller="Category" asp-action="Index">Category</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light" asp-area="" asp-controller="" asp-action="Record">Record</a>

@@ -1,5 +1,6 @@
 ﻿using FPTBook.Data;
 using FPTBook.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
@@ -26,6 +27,8 @@ namespace FPTBook.Controllers
             var book = context.Books.Find(id);
             return View(book);
         }
+
+        [Authorize(Roles = "BookOwner")]
         [HttpGet]
         public IActionResult Add()
         {
@@ -47,6 +50,7 @@ namespace FPTBook.Controllers
             return View(book);
         }
 
+        [Authorize(Roles = "BookOwner")]
         [HttpGet]
         public IActionResult Edit(int id)
         {
@@ -69,6 +73,7 @@ namespace FPTBook.Controllers
             return View(book);
         }
 
+        [Authorize(Roles = "BookOwner")]
         public IActionResult Delete(int id)
         {
             var book = context.Books.Find(id);

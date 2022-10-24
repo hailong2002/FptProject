@@ -1,7 +1,9 @@
 ﻿using FPTBook.Data;
 using FPTBook.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 using System.Linq;
 
 namespace FPTBook.Controllers
@@ -15,6 +17,7 @@ namespace FPTBook.Controllers
             this.context = context;
         }
 
+       
         public IActionResult Index()
         {
             var categories = context.Categories.ToList();
@@ -31,7 +34,7 @@ namespace FPTBook.Controllers
             return View(category);
         }
 
-        [HttpGet]
+     /*   [HttpGet]
         public IActionResult Add()
         {
             return View();
@@ -46,9 +49,10 @@ namespace FPTBook.Controllers
                 return RedirectToAction("Index");
             }
             return View(category);
-        }
+        }*/
 
         [HttpGet]
+        [Authorize(Roles = "Administrator")]
         public IActionResult Edit(int id)
         {
             var cate = context.Categories.Find(id);
@@ -67,13 +71,17 @@ namespace FPTBook.Controllers
             return View(category);
         }
 
+        [Authorize(Roles = "Administrator")]
         public IActionResult Delete(int id)
         {
+            TempData["Message"] = "Delete successfully";
             var category = context.Categories.Find(id);
             context.Categories.Remove(category);
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [Authorize(Roles = "BookOwner")]
         [HttpGet]
         public IActionResult Request()
         {

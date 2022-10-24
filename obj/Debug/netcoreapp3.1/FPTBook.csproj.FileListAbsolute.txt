@@ -1437,3 +1437,5 @@ C:\Users\TNT\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\R
 C:\Users\dell\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\Razor\Views\Client\Store.cshtml.g.cs
 C:\Users\dell\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\Razor\Views\Client\Detail.cshtml.g.cs
 >>>>>>> 5025b808367e2abc64fa0e40cacd9510a29b785c
+C:\Users\TNT\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\Razor\Views\Client\Detail.cshtml.g.cs
+C:\Users\TNT\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\Razor\Views\Client\Store.cshtml.g.cs

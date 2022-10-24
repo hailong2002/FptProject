@@ -1,6 +1,7 @@
 ﻿using FPTBook.Data;
 using FPTBook.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
@@ -29,10 +30,13 @@ namespace FPTBook.Controllers
         public IActionResult ApproveRequest(int id)
         {
             var request = new Category();
-             request.Name = context.Requests.Where(x=> x.Id == id).First().Name;
-             request.Description = context.Requests.Where(x=> x.Id == id).First().Description;
+            request.Name = context.Requests.Where(x=> x.Id == id).First().Name;
+            request.Description = context.Requests.Where(x=> x.Id == id).First().Description;
             TempData["Message"] = "New Category has been added";
             var category = context.Categories.Add(request);
+            context.SaveChanges();
+            var req =  context.Requests.Find(id);
+            context.Requests.Remove(req);
             context.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -62,15 +66,16 @@ namespace FPTBook.Controllers
         [Authorize(Roles = "Administrator")]
         public IActionResult BookOwner()
         {
-            /*var roles = context.UserRoles.Where(r => r.RoleId == "B").First().UserId.ToList();
-            var role = "";
-            for (int i = 0; i<= roles.Count(); i++)
+          //  var role = context.UserRoles.Where(r => r.RoleId == "B").First().UserId;
+           // var bookowner = context.Users.Where(c => c.Id == role).ToList();
+
+            var roles = context.UserRoles.Where(r => r.RoleId == "B");
+            var bookowner = context.Users.ToList();
+          /*  foreach (var r in roles)
             {
-               role =  roles[i];
+               bookowner = context.Users.Where(b => b.Id == r.UserId).ToList();
             }*/
-           // var bookowner = context.Users.Where(b=>b.Id == role).ToList();
-         //   return View(bookowner)
-                return View();
+            return View(bookowner);
         }
     }
 }

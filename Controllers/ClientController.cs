@@ -13,13 +13,10 @@ namespace FPTBook.Controllers
         {
             this.context = context;
         }
-<<<<<<< HEAD
+
 
 
         [Route("/")]
-=======
->>>>>>> 5025b808367e2abc64fa0e40cacd9510a29b785c
-
         public IActionResult Index()
         {
             return View();
