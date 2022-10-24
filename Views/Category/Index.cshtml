@@ -36,7 +36,7 @@
         <tr>
             <td>@(Model.IndexOf(cate)+1)</td>
             <td>@cate.Name</td>
-            <td>@cate.Description</td>
+            <td style="text-align: justify">@cate.Description</td>
             @if(User.Identity.IsAuthenticated && User.IsInRole("Administrator"))
             {
                         <td class="col-md-2 text-center">

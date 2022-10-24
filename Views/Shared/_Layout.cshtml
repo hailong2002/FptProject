@@ -50,15 +50,13 @@
                             <li class="nav-item" style="margin-right:30px">
                                 <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="Index">Request Approval</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" style="margin-right:30px">
                                 <a class="nav-link text-light" asp-area="" asp-controller="Category" asp-action="Index">Category</a>
                             </li>
-                            <li class="nav-item" style="margin-right:30px">
-                                <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="Customer">Customer</a>
+                            <li class="nav-item" >
+                                <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="Customer">User Account</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="BookOwner">Bookstore owner</a>
-                            </li>
+                           
                         }
                         @if (User.Identity.IsAuthenticated && User.IsInRole("BookOwner"))
                         {

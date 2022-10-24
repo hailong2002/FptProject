@@ -15,7 +15,7 @@ namespace FPTBook.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.30")
+                .HasAnnotation("ProductVersion", "3.1.29")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -234,21 +234,21 @@ namespace FPTBook.Migrations
                         new
                         {
                             Id = "A",
-                            ConcurrencyStamp = "7e6e3630-febd-4ebd-94b4-84fcc7d4e36a",
+                            ConcurrencyStamp = "1a0b808e-d600-4bf6-96df-de128f5b4451",
                             Name = "Administrator",
                             NormalizedName = "Administrator"
                         },
                         new
                         {
                             Id = "B",
-                            ConcurrencyStamp = "2ff926af-f638-41c5-8aa7-dac7755ab343",
+                            ConcurrencyStamp = "83e5fa15-720d-4b12-8a14-bdde7468e336",
                             Name = "BookOwner",
                             NormalizedName = "BookOwner"
                         },
                         new
                         {
                             Id = "C",
-                            ConcurrencyStamp = "9b8a08a1-dc69-40cd-abd5-8b66cc37f244",
+                            ConcurrencyStamp = "0058131a-f6a6-492a-b119-677393a293a4",
                             Name = "Customer",
                             NormalizedName = "Customer"
                         });
@@ -347,15 +347,15 @@ namespace FPTBook.Migrations
                         {
                             Id = "1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "91129ddb-f831-4468-899c-692bf575502d",
+                            ConcurrencyStamp = "0974b6fb-02ae-4f66-aadb-44d83484ee38",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedUserName = "admin@gmail.com",
-                            PasswordHash = "AQAAAAEAACcQAAAAEOkXRm+vPNN82dUOUT3Y7iiDU5zG4kLCP6TRyOV6CGKYdTki9MSpMCBGuDSxbEOtwQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPKhER8NkK6pSuMLD5ndUUZgYa6T5ZNTEkGD8zaPfQSawTi6ngdHS6qixObQG6LCYQ==",
                             PhoneNumber = "1234567890",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "ab5f5da6-67eb-46eb-bc5a-e864a2396f22",
+                            SecurityStamp = "b9db64cf-a6e0-4f01-811a-5cdcb7d5aac9",
                             TwoFactorEnabled = false,
                             UserName = "admin@gmail.com"
                         },
@@ -363,15 +363,15 @@ namespace FPTBook.Migrations
                         {
                             Id = "2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "9fe16b73-2584-4318-bce4-f6cbbe23ae0a",
+                            ConcurrencyStamp = "95d1537d-f918-481b-8697-7fa76ffd7479",
                             Email = "bookowner1@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedUserName = "bookowner1@gmail.com",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDpyDtwZz5PrD84i0W+gDLELmzGeHwHHFQpbRBDIg0zpJKejlZC07YGeJN0CfuTs1Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAECpSoWGHov3QSZwtdJgzwWjryO3+EaOEk9zQbp3swaDI9WE+JR/ZEC//BXINEl2AYQ==",
                             PhoneNumber = "0987654321",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c7a89111-cb81-4d87-ae7a-8651ec374904",
+                            SecurityStamp = "f694af7c-a71c-453d-8457-90e709aab326",
                             TwoFactorEnabled = false,
                             UserName = "bookowner1@gmail.com"
                         },
@@ -379,15 +379,15 @@ namespace FPTBook.Migrations
                         {
                             Id = "3",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f75d1895-a800-40d1-91c9-db2553bd914c",
+                            ConcurrencyStamp = "31fa0429-dd2a-4c83-b238-4119ecce9a3e",
                             Email = "bookowner2@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedUserName = "bookowner2@gmail.com",
-                            PasswordHash = "AQAAAAEAACcQAAAAEIQJO0JsIgp1KeDQdoGkkCMKUcWIsVEcH5IeWwPkM5pjHoW/6p/jsXUBfiLjOyskMg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEFyYbSuEhfhSJ9Go8Pz3ByrCsqzo3Xsy36fJNiOE+ZCcrQzHXg+fTkWNTVMQz/0Cw==",
                             PhoneNumber = "0987227890",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a096b3b2-ba85-4db0-a8e5-90e1277fbeed",
+                            SecurityStamp = "988f5023-f8f3-4abe-89d7-ac264ec22674",
                             TwoFactorEnabled = false,
                             UserName = "bookowner2@gmail.com"
                         },
@@ -395,14 +395,14 @@ namespace FPTBook.Migrations
                         {
                             Id = "4",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c2d8da2c-1374-4a0e-8965-dd7d6b86764f",
+                            ConcurrencyStamp = "02c2de21-2a8d-40a9-8d6a-420cd263098e",
                             Email = "bookowner3@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedUserName = "bookowner@gmail.com",
                             PhoneNumber = "0222567890",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "8af298a8-cdd7-4c30-82d7-ccfb4552fcd3",
+                            SecurityStamp = "a208d93c-44d2-439d-ab09-390f75834177",
                             TwoFactorEnabled = false,
                             UserName = "bookowner3@gmail.com"
                         },
@@ -410,15 +410,15 @@ namespace FPTBook.Migrations
                         {
                             Id = "5",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "cdd68da6-dee8-4c49-b660-1d92e3d6d9fe",
+                            ConcurrencyStamp = "ec418890-d83f-48b4-bc2e-ae6240826429",
                             Email = "customer@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedUserName = "customer@gmail.com",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJypuFe+HbQZvvgaMr0AVAEn+gmnJU10MO1Z1ZZVwKx+RuLPSwNkRk2MUyuk75NkHw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDddjVCpcEdmArrj3BIzhx/MovvgUKfOtSbrtbTno8G3iNHX4fG3eLANbhBaG4PIeg==",
                             PhoneNumber = "0123456789",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "5c4b6777-c1e7-4f72-9a4e-e3f72cbfa7b1",
+                            SecurityStamp = "be7798d7-e8a3-4ae0-a962-c3f3d66cf07c",
                             TwoFactorEnabled = false,
                             UserName = "customer@gmail.com"
                         });

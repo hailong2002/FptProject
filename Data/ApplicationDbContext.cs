@@ -14,7 +14,6 @@ namespace FPTBook.Data
             : base(options)
         {
         }
-
         public DbSet<Admin> Admins { get; set; }
 
         public DbSet<Category> Categories { get; set; }
@@ -175,7 +174,7 @@ namespace FPTBook.Data
             bookOwner2.PasswordHash = hasher.HashPassword(bookOwner2, "123456");
             customer.PasswordHash = hasher.HashPassword(customer, "123456");
 
-            builder.Entity<IdentityUser>().HasData(admin,  bookOwner1, bookOwner2, bookOwner3, customer);
+            builder.Entity<IdentityUser>().HasData(admin, bookOwner1, bookOwner2, bookOwner3, customer);
         }
 
         private void SeedRole(ModelBuilder builder)
@@ -237,7 +236,5 @@ namespace FPTBook.Data
 
                 );
         }
-
-    
     }
 }

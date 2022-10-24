@@ -227,9 +227,9 @@ namespace FPTBook.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "A", "7e6e3630-febd-4ebd-94b4-84fcc7d4e36a", "Administrator", "Administrator" },
-                    { "B", "2ff926af-f638-41c5-8aa7-dac7755ab343", "BookOwner", "BookOwner" },
-                    { "C", "9b8a08a1-dc69-40cd-abd5-8b66cc37f244", "Customer", "Customer" }
+                    { "A", "1a0b808e-d600-4bf6-96df-de128f5b4451", "Administrator", "Administrator" },
+                    { "B", "83e5fa15-720d-4b12-8a14-bdde7468e336", "BookOwner", "BookOwner" },
+                    { "C", "0058131a-f6a6-492a-b119-677393a293a4", "Customer", "Customer" }
                 });
 
             migrationBuilder.InsertData(
@@ -237,11 +237,11 @@ namespace FPTBook.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "1", 0, "91129ddb-f831-4468-899c-692bf575502d", "admin@gmail.com", true, false, null, null, "admin@gmail.com", "AQAAAAEAACcQAAAAEOkXRm+vPNN82dUOUT3Y7iiDU5zG4kLCP6TRyOV6CGKYdTki9MSpMCBGuDSxbEOtwQ==", "1234567890", false, "ab5f5da6-67eb-46eb-bc5a-e864a2396f22", false, "admin@gmail.com" },
-                    { "2", 0, "9fe16b73-2584-4318-bce4-f6cbbe23ae0a", "bookowner1@gmail.com", true, false, null, null, "bookowner1@gmail.com", "AQAAAAEAACcQAAAAEDpyDtwZz5PrD84i0W+gDLELmzGeHwHHFQpbRBDIg0zpJKejlZC07YGeJN0CfuTs1Q==", "0987654321", false, "c7a89111-cb81-4d87-ae7a-8651ec374904", false, "bookowner1@gmail.com" },
-                    { "3", 0, "f75d1895-a800-40d1-91c9-db2553bd914c", "bookowner2@gmail.com", true, false, null, null, "bookowner2@gmail.com", "AQAAAAEAACcQAAAAEIQJO0JsIgp1KeDQdoGkkCMKUcWIsVEcH5IeWwPkM5pjHoW/6p/jsXUBfiLjOyskMg==", "0987227890", false, "a096b3b2-ba85-4db0-a8e5-90e1277fbeed", false, "bookowner2@gmail.com" },
-                    { "4", 0, "c2d8da2c-1374-4a0e-8965-dd7d6b86764f", "bookowner3@gmail.com", true, false, null, null, "bookowner@gmail.com", null, "0222567890", false, "8af298a8-cdd7-4c30-82d7-ccfb4552fcd3", false, "bookowner3@gmail.com" },
-                    { "5", 0, "cdd68da6-dee8-4c49-b660-1d92e3d6d9fe", "customer@gmail.com", true, false, null, null, "customer@gmail.com", "AQAAAAEAACcQAAAAEJypuFe+HbQZvvgaMr0AVAEn+gmnJU10MO1Z1ZZVwKx+RuLPSwNkRk2MUyuk75NkHw==", "0123456789", false, "5c4b6777-c1e7-4f72-9a4e-e3f72cbfa7b1", false, "customer@gmail.com" }
+                    { "1", 0, "0974b6fb-02ae-4f66-aadb-44d83484ee38", "admin@gmail.com", true, false, null, null, "admin@gmail.com", "AQAAAAEAACcQAAAAEPKhER8NkK6pSuMLD5ndUUZgYa6T5ZNTEkGD8zaPfQSawTi6ngdHS6qixObQG6LCYQ==", "1234567890", false, "b9db64cf-a6e0-4f01-811a-5cdcb7d5aac9", false, "admin@gmail.com" },
+                    { "2", 0, "95d1537d-f918-481b-8697-7fa76ffd7479", "bookowner1@gmail.com", true, false, null, null, "bookowner1@gmail.com", "AQAAAAEAACcQAAAAECpSoWGHov3QSZwtdJgzwWjryO3+EaOEk9zQbp3swaDI9WE+JR/ZEC//BXINEl2AYQ==", "0987654321", false, "f694af7c-a71c-453d-8457-90e709aab326", false, "bookowner1@gmail.com" },
+                    { "3", 0, "31fa0429-dd2a-4c83-b238-4119ecce9a3e", "bookowner2@gmail.com", true, false, null, null, "bookowner2@gmail.com", "AQAAAAEAACcQAAAAEEFyYbSuEhfhSJ9Go8Pz3ByrCsqzo3Xsy36fJNiOE+ZCcrQzHXg+fTkWNTVMQz/0Cw==", "0987227890", false, "988f5023-f8f3-4abe-89d7-ac264ec22674", false, "bookowner2@gmail.com" },
+                    { "4", 0, "02c2de21-2a8d-40a9-8d6a-420cd263098e", "bookowner3@gmail.com", true, false, null, null, "bookowner@gmail.com", null, "0222567890", false, "a208d93c-44d2-439d-ab09-390f75834177", false, "bookowner3@gmail.com" },
+                    { "5", 0, "ec418890-d83f-48b4-bc2e-ae6240826429", "customer@gmail.com", true, false, null, null, "customer@gmail.com", "AQAAAAEAACcQAAAAEDddjVCpcEdmArrj3BIzhx/MovvgUKfOtSbrtbTno8G3iNHX4fG3eLANbhBaG4PIeg==", "0123456789", false, "be7798d7-e8a3-4ae0-a962-c3f3d66cf07c", false, "customer@gmail.com" }
                 });
 
             migrationBuilder.InsertData(

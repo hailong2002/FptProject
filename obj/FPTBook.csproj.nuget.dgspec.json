@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TNT\\OneDrive\\Máy tính\\FptProject\\FptProject\\FPTBook.csproj": {}
+    "C:\\Users\\TNT\\OneDrive\\Máy tính\\1670-dotnet core\\FPTBook\\FPTBook.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TNT\\OneDrive\\Máy tính\\FptProject\\FptProject\\FPTBook.csproj": {
+    "C:\\Users\\TNT\\OneDrive\\Máy tính\\1670-dotnet core\\FPTBook\\FPTBook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TNT\\OneDrive\\Máy tính\\FptProject\\FptProject\\FPTBook.csproj",
+        "projectUniqueName": "C:\\Users\\TNT\\OneDrive\\Máy tính\\1670-dotnet core\\FPTBook\\FPTBook.csproj",
         "projectName": "FPTBook",
-        "projectPath": "C:\\Users\\TNT\\OneDrive\\Máy tính\\FptProject\\FptProject\\FPTBook.csproj",
+        "projectPath": "C:\\Users\\TNT\\OneDrive\\Máy tính\\1670-dotnet core\\FPTBook\\FPTBook.csproj",
         "packagesPath": "C:\\Users\\TNT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TNT\\OneDrive\\Máy tính\\FptProject\\FptProject\\obj\\",
+        "outputPath": "C:\\Users\\TNT\\OneDrive\\Máy tính\\1670-dotnet core\\FPTBook\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TNT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,7 +42,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.28, )"
+              "version": "[3.1.29, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -54,7 +54,7 @@
             },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
-              "version": "[3.1.28, )"
+              "version": "[3.1.29, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -90,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

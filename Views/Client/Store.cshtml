@@ -11,13 +11,12 @@
         </button>
     </from>
 </div>
-<div class="container" style="padding: 20px">
- 
+<div class="container" style="padding: 20px; ">
     <div class="row">
         @foreach (var books in Model)
         {
-            <div class="card col-md-3 text-center mr-4 rounded-3" style="width: 18rem; border: 3px solid #274D3C ">
-                <img src="@books.Image" class="card-img-top" width="300" height="300">
+            <div class="card col-md text-center rounded-3" style=" border: 3px solid #274D3C; margin-right:10px  ">
+                <img src="@books.Image" class="card-img-top" width="200" height="250">
                 <div class="card-body">
                     <h5 class="card-title">@books.Title</h5>
                     <h5 class="card-title text-danger"><strong>$ @books.Price</strong></h5>
@@ -25,7 +24,7 @@
                     <input type="hidden" name="laptop" value="@books.Id">
    
                     <div>
-                        <a class="btn btn-info" asp-controller="Client" asp-action="Detail" asp-route-id="@books.Id">Order</a>
+                        <a class="btn btn-info" asp-controller="Client" asp-action="Detail" asp-route-id="@books.Id"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
                 </div>
             </div>
