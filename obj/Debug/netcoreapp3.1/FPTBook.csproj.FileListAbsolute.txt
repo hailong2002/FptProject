@@ -965,3 +965,4 @@ C:\Users\TNT\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\F
 C:\Users\TNT\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\FPTBook.pdb
 C:\Users\TNT\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\FPTBook.genruntimeconfig.cache
 C:\Users\TNT\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\Razor\Views\Order\MakeOrder.cshtml.g.cs
+C:\Users\TNT\OneDrive\Máy tính\FptProject\FptProject\obj\Debug\netcoreapp3.1\Razor\Views\Order\Record.cshtml.g.cs

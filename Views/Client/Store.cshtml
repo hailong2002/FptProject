@@ -32,14 +32,12 @@
 </div>
 
 
-
-
-<div class="container row" style="padding: 20px; ">
-    <div class="row" >
+<div class="container " style="padding: 20px; ">
+    <div class="row" style="margin-right:-230px; margin-left:120px">
         @foreach (var books in Model)
         {
             <div class="card col-md-3 text-center" style=" border: 3px solid #274D3C; margin-right:10px; margin-top:10px  ">
-                <img src="@books.Image" class="card-img-top" width="200" height="250">
+                <img src="@books.Image" class="card-img-top" width="200" height="300">
                 <div class="card-body">
                     <h5 class="card-title">@books.Title</h5>
                     <h5 class="card-title text-danger"><strong>$ @books.Price</strong></h5>
@@ -54,5 +52,39 @@
         }
     </div>
 </div>
+@*<div class="container row" style="padding: 20px; ">
+    <div class="row" >
+        @foreach (var books in Model)
+        {
+            <div class="card col-md-3 text-center" style=" border: 3px solid #274D3C; margin-right:10px; margin-top:10px  ">
+                <img src="@books.Image" class="card-img-top" width="200" height="250">
+                <div class="card-body">
+                    <h5 class="card-title">@books.Title</h5>
+                    <h5 class="card-title text-danger"><strong>$ @books.Price</strong></h5>
+                    @if(books.Quantity >= 1)
+                    {
+                        <h6 class="card-title">Quantity: @books.Quantity</h6>
+                        <input type="hidden" name="laptop" value="@books.Id">
+
+                        <div>
+                            <a class="btn btn-info" asp-controller="Client" asp-action="Detail" asp-route-id="@books.Id"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                    }else{
+                        <h6 class="card-title">Out of Stock. Please come back later.</h6>
+                    }
 
 
+                </div>
+            </div>
+        }
+    </div>
+</div>  *@
+
+
+
+
+
+
+
+	
+				

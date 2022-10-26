@@ -39,19 +39,27 @@
             </tr>
         </table>
 
-        <form method="post" asp-controller="Order" asp-action="MakeOrder" asp-route-id="@Model.Id">
-              <div class="text-center row"style="margin-left:520px">
-                <div>
-                    <input type="hidden" name="book"  />
+        @if(User.Identity.IsAuthenticated && User.IsInRole("Customer"))
+        {
+            <form method="post" asp-controller="Order" asp-action="MakeOrder" asp-route-id="@Model.Id"
+            asp-route-customerName="@User.Identity.Name">
+                <div class="text-center row" style="margin-left:520px">
+                    <div>
+                        <input type="hidden" name="book" />
+                    </div>
+                    <div class="col-md-2 mr-5">
+                        <input type="number" name="quantity" min="1" max="@Model.Quantity" value="1" class="form-control" style="width: 70px">
+                    </div>
+                    <div class="col-md-2">
+                        <input class="btn btn-success" type="submit" value="Order" style="width:100px">
+                    </div>
                 </div>
-                <div class="col-md-2 mr-5">
-                    <input type="number" name="quantity" min="1" max="@Model.Quantity" value="1" class="form-control" style="width: 70px">
-                </div>
-                <div class="col-md-2">
-                    <input class="btn btn-success" type="submit" value="Order" style="width:100px">
-                </div>
-            </div>
-          </form>
+            </form>
+        }
+        else{
+            <h5 class="text-danger">You must be logged in to order a book.</h5>
+        }
+       
 
             
         </div>
