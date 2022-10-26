@@ -9355,11 +9355,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TNT\\OneDrive\\Máy tính\\1670-dotnet core\\FPTBook\\FPTBook.csproj",
+      "projectUniqueName": "C:\\Users\\TNT\\OneDrive\\Máy tính\\FptProject\\FptProject\\FPTBook.csproj",
       "projectName": "FPTBook",
-      "projectPath": "C:\\Users\\TNT\\OneDrive\\Máy tính\\1670-dotnet core\\FPTBook\\FPTBook.csproj",
+      "projectPath": "C:\\Users\\TNT\\OneDrive\\Máy tính\\FptProject\\FptProject\\FPTBook.csproj",
       "packagesPath": "C:\\Users\\TNT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TNT\\OneDrive\\Máy tính\\1670-dotnet core\\FPTBook\\obj\\",
+      "outputPath": "C:\\Users\\TNT\\OneDrive\\Máy tính\\FptProject\\FptProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\TNT\\AppData\\Roaming\\NuGet\\NuGet.Config",

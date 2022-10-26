@@ -4,25 +4,48 @@
 
 
 <div class="container col-md-6 mt-4">
-    <from class="search_form" style="width:600px; margin-left:240px" >
-        <input type="text" class="form-control" placeholder="Search here..." style="border: 2px solid #274D3C   ">
+    <form class="search_form" method="post" asp-controller="Client" asp-action="Search" style="width:600px; margin-left:240px" >
+        <input type="search" class="form-control" placeholder="Search here..." name="keyword" style="border: 2px solid #274D3C" requierd>
         <button class="" type="submit">
             <i class="fa fa-search" aria-hidden="true"></i>
         </button>
-    </from>
+    </form>
 </div>
-<div class="container" style="padding: 20px; ">
-    <div class="row">
+
+@if(TempData["Message"] != null)
+{
+    <h3 class="alert-danger">@TempData["Message"]</h3>
+}
+
+
+ <div class="container col-md-3 row mt-4">
+    <div class="col-md-2">
+        <h5 class="text-primary">Sort by name</h5>
+        <a asp-controller="Client" asp-action="SortAscName" class="btn btn-primary">A → Z</a>
+        <a asp-controller="Client" asp-action="SortDscName" class="btn btn-primary">Z → A</a>
+    </div>
+    <div class="col-md-2">
+        <h5 class="text-danger">Sort by Price</h5>
+        <a asp-controller="Client" asp-action="SortAscPrice" class="btn btn-danger ">$ ↑</a>
+        <a asp-controller="Client" asp-action="SortDscPrice" class="btn btn-danger ">$ ↓</a>
+    </div>
+</div>
+
+
+
+
+<div class="container row" style="padding: 20px; ">
+    <div class="row" >
         @foreach (var books in Model)
         {
-            <div class="card col-md text-center rounded-3" style=" border: 3px solid #274D3C; margin-right:10px  ">
+            <div class="card col-md-3 text-center" style=" border: 3px solid #274D3C; margin-right:10px; margin-top:10px  ">
                 <img src="@books.Image" class="card-img-top" width="200" height="250">
                 <div class="card-body">
                     <h5 class="card-title">@books.Title</h5>
                     <h5 class="card-title text-danger"><strong>$ @books.Price</strong></h5>
                     <h6 class="card-title">Quantity: @books.Quantity</h6>
                     <input type="hidden" name="laptop" value="@books.Id">
-   
+
                     <div>
                         <a class="btn btn-info" asp-controller="Client" asp-action="Detail" asp-route-id="@books.Id"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
@@ -31,3 +54,5 @@
         }
     </div>
 </div>
+
+

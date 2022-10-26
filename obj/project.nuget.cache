@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sIELQsffi0pA+PSCPvATkIOhLUYEFvQmTy8AjB/Atd0GI7IEzFGjEc2cA0nE64S9VUkth+BIeNDJW6QbnLqQAg==",
+  "dgSpecHash": "BLftTGLQ4g9wFh9UrH5XW8rEOC/oQVs5hiADy4/cm7HzOEEcoVQrgGjm5BDgZv2RXMTFGOpxY5939Z3qPSE0nQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TNT\\OneDrive\\Máy tính\\1670-dotnet core\\FPTBook\\FPTBook.csproj",
+  "projectFilePath": "C:\\Users\\TNT\\OneDrive\\Máy tính\\FptProject\\FptProject\\FPTBook.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TNT\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.30\\microsoft.aspnetcore.cryptography.internal.3.1.30.nupkg.sha512",
     "C:\\Users\\TNT\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.30\\microsoft.aspnetcore.cryptography.keyderivation.3.1.30.nupkg.sha512",

@@ -14,6 +14,8 @@ namespace FPTBook.Controllers
         {
             this.context = context;
         }
+
+        [Authorize(Roles = "BookOwner")]
         public IActionResult Index()
         {
             var categories = context.Categories.ToList();
@@ -81,5 +83,9 @@ namespace FPTBook.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+     
+
+       
     }
 }

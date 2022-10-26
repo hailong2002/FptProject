@@ -38,14 +38,21 @@
                 <td>@Model.Description</td>
             </tr>
         </table>
-        <div class="text-center row"style="margin-left:520px">
-          
-            <div class="col-md-3 mr-4" >
-                <input type="number" name="quantity" min="1" max="@Model.Quantity" value="1" class="form-control" style="width: 70px">
+
+        <form method="post" asp-controller="Order" asp-action="MakeOrder" asp-route-id="@Model.Id">
+              <div class="text-center row"style="margin-left:520px">
+                <div>
+                    <input type="hidden" name="book"  />
+                </div>
+                <div class="col-md-2 mr-5">
+                    <input type="number" name="quantity" min="1" max="@Model.Quantity" value="1" class="form-control" style="width: 70px">
+                </div>
+                <div class="col-md-2">
+                    <input class="btn btn-success" type="submit" value="Order" style="width:100px">
+                </div>
             </div>
-            <div class="col-md-3">
-                <input class="btn btn-success" type="submit" value="Order" style="width:100px">
-            </div>
+          </form>
+
+            
         </div>
     </div>
-</div>

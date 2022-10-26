@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace FPTBook.Models
 {
@@ -32,5 +34,6 @@ namespace FPTBook.Models
 
         public Category Category { get; set; }
 
+        public ICollection<Order> Orders { get; set; }
     }
 }
