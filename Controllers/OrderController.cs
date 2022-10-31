@@ -9,33 +9,44 @@ namespace FPTBook.Controllers
 {
     public class OrderController : Controller
     {
-
         public ApplicationDbContext context { get; set; }
-
         public OrderController(ApplicationDbContext context)
         {
             this.context = context;
         }
 
         [Authorize (Roles = "Customer")]
-        public IActionResult MakeOrder(int id, int quantity, string customerName)
+        public IActionResult MakeOrder(int id, int quantity, string customerName, int price )
         {
+            TempData["ok"] = "Order successfully !";
             var order = new Order();
+            order.Status = -1;
+            order.Price = price;
             order.OrderQuantity = quantity;
             order.BookId = id;
             order.Customer = customerName;
             order.OrderName = context.Books.Find(id).Title;
             order.OrderPrice = (context.Books.Find(id).Price)*quantity;
+            
             context.Orders.Add(order);
             context.SaveChanges();
             return View(order);
+        }
+
+        public IActionResult CancelOrder(int id)
+        {
+            var order = context.Orders.Find(id);
+            context.Orders.Remove(order);
+            context.SaveChanges();
+            return Redirect("~/Client/Store");
         }
 
         [Authorize(Roles = "BookOwner")]
         public IActionResult Record()
         {
             var customerOrder = context.Orders.ToList();
-            return View(customerOrder);
+           
+            return View(customerOrder) ;
         }
 
         [Authorize (Roles = "BookOwner")]
@@ -43,15 +54,11 @@ namespace FPTBook.Controllers
         {
             TempData["approve"] = "Order has been approved";
             var order = context.Orders.Find(id);
-            //get name of book order
             var name = context.Orders.Where(x=>x.Id == id).First().OrderName;
-            //decrease quantity of book in db
             context.Books.Where(x => x.Title == name).First().Quantity -= quantity;
-     
-            context.Orders.Remove(order);
+            context.Orders.Where(x => x.Id == id).First().Status = 1;
             context.SaveChanges();
             return RedirectToAction("Record");
-
         }
 
         [Authorize(Roles = "BookOwner")]
@@ -59,7 +66,7 @@ namespace FPTBook.Controllers
         {
             TempData["cancel"] = "Order has been cancelled";
             var order = context.Orders.Find(id);
-            context.Orders.Remove(order);
+            context.Orders.Where(x => x.Id == id).First().Status = 0;
             context.SaveChanges();
             return RedirectToAction("Record");
 

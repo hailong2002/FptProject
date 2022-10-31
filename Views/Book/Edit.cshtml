@@ -1,8 +1,8 @@
 ﻿@model FPTBook.Models.Book
 
 <div class="container">
-    <h3 class="text-success text-center">Add new Book!!!!!</h3>
-    <form method="post" asp-controller="Book" , asp-action="Edit" style="margin-bottom:50px">
+    <h3 class="text-success text-center" style="margin-top:-30px">Edit Book Information</h3>
+    <form method="post" asp-controller="Book" , asp-action="Edit" style="margin-bottom:80px">
         <div class="form-group">
             <label>Title</label>
             <input class="form-control" asp-for="@Model.Title" />
@@ -18,8 +18,7 @@
 
         <div class="form-group">
             <label>Category Name</label>
-            <select class="list-group-item"
-                    asp-for="CategoryId"
+            <select class="list-group-item" asp-for="CategoryId"
                     asp-items="@(new SelectList(ViewBag.Categories ,"Id","Name"))">
                 <option>Select a category</option>
             </select>
@@ -34,7 +33,7 @@
 
         <div class="form-group">
             <label>Image</label><br />
-            <img src="@Model.Image" width="180px"/>
+            <img src="@Model.Image" width="180px"/><br />
             <input class="form-control" asp-for="@Model.Image" width="200" />
             <span class="text-danger" asp-validation-for="@Model.Image"></span>
         </div>

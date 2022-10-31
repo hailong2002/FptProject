@@ -76,12 +76,16 @@ namespace FPTBook.Controllers
         }
 
         [Authorize(Roles = "BookOwner")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(int? id)
         {
-            var book = context.Books.Find(id);
-            context.Books.Remove(book);
-            context.SaveChanges();
-            return RedirectToAction("Index");
+            if(id == null) return NotFound();
+            else
+            {
+                   var book = context.Books.Find(id);
+                   context.Books.Remove(book);
+                   context.SaveChanges();
+                   return RedirectToAction("Index");
+            }
         }
 
      

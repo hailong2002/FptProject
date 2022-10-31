@@ -25,7 +25,9 @@ else{
                     <th>Time</th>
                     <th>Book title</th>
                     <th>Quantity</th>
+                    <th>Price</th>
                     <th>Total Price</th>
+                    <th>Status</th>
                     <th colspan="2">Action</th>
                 </tr>
             </thead>
@@ -35,18 +37,41 @@ else{
                     <tr>
                         <td>@(Model.IndexOf(order) + 1)</td>
                         <td>@order.Customer</td>
-                        <td>@order.OrderDate</td>
+                        <td>@DateTime.Now.Date.ToShortDateString()</td>
                         <td>@order.OrderName</td>
                         <td>@order.OrderQuantity</td>
-                        <td>@order.OrderPrice</td>
-                        <td>
-                            <a class="btn btn-primary" asp-route-quantity="@order.OrderQuantity" asp-controller="Order" asp-action="Approve" asp-route-id="@order.Id"><i class="fa-solid fa-check"></i></a>
+                        <td>@order.Price $</td>
+                        <td>@order.OrderPrice $</td>
+                        <td>@{if(order.Status == 1)
+                            {
+                                    <h6>Approved</h6>
+                            }
+                            else if (order.Status == 0){
+                                    <h6>Rejected</h6>
+                            }
+                            else{
+                                    <h6>Pending</h6>
+                            }}
                         </td>
-                        <td>
-                            <a class="btn btn-danger" asp-controller="Order" asp-action="Cancel" asp-route-id="@order.Id" style="width:42px"><i class="fa-solid fa-xmark"></i></a>
-                        </td>
+                        @if(order.Status != 1 && order.Status !=0)
+                        {
+                            <td>
+                                <a class="btn btn-primary" asp-route-quantity="@order.OrderQuantity" asp-controller="Order" asp-action="Approve" asp-route-id="@order.Id"><i class="fa-solid fa-check"></i></a>
+                            </td>
+                            <td>
+                                <a class="btn btn-danger" asp-controller="Order" asp-action="Cancel" asp-route-id="@order.Id" style="width:42px"><i class="fa-solid fa-xmark"></i></a>
+                            </td>
+                        }
+                        else{
+                            <h6></h6>
+                        }
+                       
                     </tr>
                 }
+                @*<tr>
+            <td>Total Quantity: @TempData["1"]  </td>
+            <td>Total Price: </td>
+            </tr> *@
             </tbody>
         </table>
     </div>

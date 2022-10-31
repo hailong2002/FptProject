@@ -10,7 +10,6 @@ namespace FPTBook.Controllers
     public class ClientController : Controller
     {
         public readonly ApplicationDbContext context;
-
         public ClientController(ApplicationDbContext context)
         {
             this.context = context;
@@ -43,8 +42,7 @@ namespace FPTBook.Controllers
             var books = context.Books.Find(id);
             return View(books);
         }
-
-        //Search
+        
         [HttpPost]
         public IActionResult Search(string keyword)
         {
@@ -55,8 +53,7 @@ namespace FPTBook.Controllers
             }
             return View("Store", books);
         }
-
-        //Sort
+       
         public IActionResult SortAscName()
         {
             var books = context.Books.OrderBy(x => x.Title).ToList();

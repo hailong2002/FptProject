@@ -1,11 +1,11 @@
 ﻿@model List<Book>
 
     <div class="container">
-    <h3 class="text-info text-center"><b>BOOK LIST</b></h3>
+    <h3 class="text-info text-center" style="margin-top:-50px"><b>BOOK LIST</b></h3>
     <a class="btn btn-success" asp-controller="Book" asp-action="Add">
         Add New <i class="bi bi-plus-square"></i>
     </a>
-    <table class="table table-striped table-hover text-center">
+    <table class="table table-striped table-hover text-center" style="margin-bottom:100px">
         <thead class="thead-dark">
             <tr>
                 <th>Id</th>
@@ -25,14 +25,14 @@
                 <td>@(Model.IndexOf(books)+1)</td>
                 <td><a asp-controller="Book" , asp-action="Detail" asp-route-id="@books.Id">@books.Title</a></td>
                 <td>@books.Category.Name</td>
-                <td><img src="@books.Image" height="265" width="200" /></td>
+                <td><img src="@books.Image" height="250" width="180" /></td>
                 <td>@books.Quantity</td>
                 <td>@books.Price</td>
                 <td>
                         <a class="btn btn-warning" asp-controller="Book" asp-action="Edit" asp-route-id="@books.Id">
                             <i class="bi bi-pencil-square"></i>
                         </a>
-                        <a class="btn btn-danger" asp-controller="Book" asp-action="Delete" asp-route-id="@books.Id" onclick="return confirm('Are you sure to delete this book BROOOO???');">
+                        <a class="btn btn-danger" asp-controller="Book" asp-action="Delete" asp-route-id="@books.Id" onclick="return confirm('Are you sure to delete this book ???');">
                             <i class="bi bi-trash3-fill"></i>
                         </a>
                 </td>

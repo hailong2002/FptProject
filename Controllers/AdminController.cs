@@ -13,7 +13,6 @@ namespace FPTBook.Controllers
     public class AdminController : Controller
     {
         private readonly ApplicationDbContext context;
-
         public AdminController(ApplicationDbContext context)
         {
             this.context = context;
@@ -25,7 +24,6 @@ namespace FPTBook.Controllers
             var requests = context.Requests.ToList();
             return View(requests);
         }
-
 
         [Authorize(Roles = "Administrator")]
         public IActionResult ApproveRequest(int id)
@@ -73,20 +71,18 @@ namespace FPTBook.Controllers
         [Authorize(Roles = "Administrator")]
         public IActionResult BookOwner()
         {
-            //GET LIST USER ID
             var userIds = context.UserRoles.Where(r => r.RoleId == "B").ToList();
-            //  var size = userIds.Count();
             var userId = "";
             var bookowner = context.Users.Where(b => b.Id == "-1").ToList();
-
-            //GET USER BY USER ID
             for (int i=0; i< userIds.Count(); i++)
             {
                 userId = userIds.ElementAt(i).UserId;
                 bookowner.Add(context.Users.Where(c => c.Id == userId).First());
             }
-           
             return View(bookowner);
         }
     }
 }
+
+//GET LIST USER ID
+//GET USER BY USER ID
